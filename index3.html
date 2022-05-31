@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/animation.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fontello.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fontello-codes.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fontello-embedded.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fontello-ie7.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fontello-ie7-codes.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Liliana Yoga</title>
+    <link type="Image/png" href="images/iconli.png"rel="icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+ 
+<script type="text/javascript">
+ 
+$(function() {
+ 
+$(window).scroll(function() {
+ 
+if($(this).scrollTop() != 0) {
+ 
+$('#toTop').fadeIn();
+ 
+} else {
+ 
+$('#toTop').fadeOut();
+ 
+}
+ 
+});
+ 
+$('#toTop').click(function() {
+ 
+$('body,html').animate({scrollTop:0},800);
+ 
+});
+ 
+});
+ 
+</script>
+  </head>
+    <style>
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+ #toTop {
+width:50px;
+background-color: rgb(89, 145, 159);
+text-align:center;
+padding:5px;
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+display:none;
+color:rgb(255, 255, 255);
+font-family:verdana;
+font-size:30px;
+border-radius: 50%;
+}
+
+html {
+margin: 0;
+padding: 0;
+line-height: 40px;
+font-family: "Marmelad";
+display: block;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1440px;
+  
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+font-family: "Marmelad"; 
+src: url("fonts/Marmelad-Regular.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+}
+
+@media screen and (min-width: 601px) {
+  div.textli {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.textli {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 601px) {
+  p.textli3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p.textli3 {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 601px) {
+  p.textli2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p.textli2 {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 601px) {
+  p.feedtext {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p.feedtext {
+    font-size: 13px;
+  }
+}
+#menu-checkbox {
+  /* чекбокс скрыт */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.main-menu {
+  /* пункты меню скрыты */
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: 0;
+}
+.main-menu li {
+  /* пункты меню расположены вертикально */
+  /* каждый имеет ширину 100% */
+  font-size: 1em;
+  display: block;
+  width: 100%;
+}
+ul.main-menu {
+  padding-bottom: 55px;
+}
+.main-menu a {
+  /* немного стилизуем ссылки */
+  display: block;
+  color: rgb(69, 86, 130);
+  padding: .5em;
+  text-decoration: none;
+}
+.main-menu a:hover {
+  color: rgb(214, 174, 80);
+}
+.toggle-button {
+  text-align: center;
+  display: block;
+  /* не забываем явно указать каким должен быть курсор */
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(23, 47, 47);
+}
+.toggle-button:after {
+  /* получаем данные из атрибута data-open в html */
+  content: attr(data-open);
+  display: block;
+  margin: 10px 0;
+  padding: 10px 30px;
+}
+#menu-checkbox:checked + nav[role="navigation"] .main-menu {
+  /* когда чекбокс активен меню становится видимым */
+  position: static;
+}
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+  content: attr(data-close);
+}
+@media screen and (min-width: 640px) {
+  .toggle-button {
+    /* label скрыт */
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .main-menu {
+    /* меню отображается */
+    position: static;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+  }
+  .main-menu li {
+    /* теги <li> расположены в ряд */
+    width: calc(100% / 5);
+    text-align: center;
+    display: inline-block;
+    margin-right: -4px;
+  }
+  .main-menu a {
+    display: inline-block;
+    margin-right: -200px;
+    font-size: 1.05em;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: rgb(6, 52, 95);
+    text-transform: uppercase;
+    border-bottom: 0;
+  }
+}
+.cont {
+  display: block;
+  position: relative;
+ 
+}
+
+.lil { 
+  margin:0px auto 0px auto;
+  display: block;
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.textli {
+  text-align: center;
+  font-size: 22px;
+  color: rgb(71, 67, 67);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.mainph {
+  height: auto;
+  width: 100%;
+  margin:0px auto 0px auto;
+  display: block;
+  padding-bottom: 10px;
+  max-width: 1440px;
+  
+ 
+}
+.heading {
+  text-align: center;
+}
+.bgcol {
+  background-color: white;
+  padding-bottom: 150px;
+  padding-top: 70px;
+}
+.phB {
+  max-width: 720px;
+  width: 100%;
+  height: 480.38;
+}
+.textfloat {
+  max-width: 720px;
+  height: 480.38px;
+  width: 100%;
+  background-color: rgb(243, 252, 241);
+  flex: 1 1 333.3px;
+  box-sizing: border-box;
+ 
+}
+.textli2 {
+  text-align: center;
+  font-size: 22px;
+  color: rgb(53, 46, 46);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 120px;
+  
+}
+.phC {
+  max-width: 720px;
+  width: 100%;
+  height: 480.38;
+}
+.textli3 {
+  text-align: center;
+  font-size: 22px;
+  color: rgb(32, 27, 27);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 120px;
+}
+.picfeed {
+  margin:0px auto 0px auto;
+  max-width: 200px;
+  height: auto;
+  width: 100%;
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
+
+.feedpiece {
+  max-width: 100%;
+  width: 480px;
+  float: left;
+  
+
+}
+.feedtext {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  color: rgb(82, 78, 78);
+  padding-bottom: 120px;
+  padding-top: 30px;
+  font-size: 18px;
+
+}
+.ic {
+  width: 100%;
+  padding-top: 200px;
+}
+.namefeed {
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: rgb(65, 68, 68);
+}
+.inbl {
+  max-width: 720px;
+  width: 100%;
+  height: 480.38;
+  flex: 1 1 333.3px;
+  box-sizing: border-box;
+  margin-bottom: -15px;
+}
+.tainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+}
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: rgb(89, 145, 159);
+  font-size: 50px;
+  
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: rgb(229, 212, 176);
+}
+
+.telegram {
+  border-radius: 50%;
+
+}
+.instagram {
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+} 
+.whatsapp {
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+
+</style>
+ <body>
+  <header><!-- шапка -->
+    <input type="checkbox" id="menu-checkbox" />
+    <nav role="navigation"><!-- навигация -->
+      <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Закрыть" onclick></label>
+      <ul class="main-menu"><!-- список пунктов меню -->
+        <li><a href="#middle">Обо мне</a></li>
+        <li><a href="#lessons">Занятия</a></li>
+        <li><a href="#feedbk">Отзывы</a></li>
+        <li><a id="contacts" href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="gap">
+  <img class="mainph" src="images/mainph2.png" alt="">
+</div><a name="middle"></a>
+
+
+<div class="bgcol"></a><img  class="lil" src="images/photo1.png" height="250px" width="auto"  alt="Liliana">
+  <div class="textli"><p >Меня зовут Лилиана. Свой путь саморазвития начала с 2010. 
+     Закончила обучение в Федерации йоги России и Культурном центре "Просветление”, обладаю международным  сертификатом (2021г);
+      Сертифицированный инструктор Международного Альянса Йоги. Занимаюсь регулярно йогой и даю уроки как в группах, так  индивидуально.  
+  </div>
+</div><a name="lessons"></a>
+
+<section class="cont">
+  <div class="tainer"><div><div class="inbl"><img class="phB" src="images/photoB.png" alt=""></div><div class="textfloat"><p class="textli2">На своих уроках я помогу выстроить
+     правильную технику выполнения асаны и не допустить травм; приведу в гармонию ваше душевное состояние через медитации. 
+  </p></div><div class="inbl"><img class="phB" src="images/photoA.png" alt=""></div></div>
+
+  <div><div class="textfloat"><p class="textli3"> Йога помогает: <br>Cправиться с болями
+    в пояснично-крестцовом отделе; <br>
+   Улучшить осанку; <br>
+   Бороться со стрессовыми состояниями и депрессией;<br>
+   </p></div><div class="inbl"><img  class="phC" src="images/photo4.png" alt=""></div><div class="textfloat"><p class="textli2">Можно практиковать йогу дома. Но важно помнить, 
+    что в начале занятий рядом должен быть опытный наставник, который контролирует правильность выполнения упражнений, особенно в силовых асанах.
+     Это позволит избежать вреда и травматизма.
+  </p></div></div></div>
+   </div>
+  </section>
+  <div class="feedpiece"><a name="feedbk"></a><img class="picfeed" src="images/Tomfeed.png" alt=""><h2 class="namefeed">Tom</h2><p class="feedtext">Liliana is an amazing yoga instructor. 
+    I have been going to her classes for a few months now, and it's had a tremendous impact on my overall well-being.
+    I'm happy I've found an Englisg-speaking instructor here in Moscow.</p></div>
+  <div class="feedpiece"><img class="picfeed" src="images/stranger.png" alt=""><h2 class="namefeed">Елена</h2><p class="feedtext">Ты помогаешь раскрывать возможности, чувствовать тело по-новому. 
+  С тобой тепло и комфортно! Ты - мой инструктор по йоге!</p></div>
+  <div class="feedpiece"><img class="picfeed" src="images/mypic.png" alt=""><h2 class="namefeed">Андрей</h2><p class="feedtext"> Лилиана подберёт такие занятия, которые будут комфортны вам, и с физической нагрузкой 
+   могут справиться абсолютно все. После тренировок наступает невероятная гармония души и тела.</p></div>
+<div   class="icon-bar">
+  <a href="https://t.me/yogabyliliana"
+  target="_blank" class="telegram"><i id="conbar" class="fa fa-telegram"></i></a>
+  <a href="https://api.whatsapp.com/send?phone=9378637977"
+  target="_blank" class="whatsapp"><i id="conbar2" class="fa fa-whatsapp"></i></a>
+  <a href="https://instagram.com/yogabyliliana?igshid=YmMyMTA2M2Y=" target="_blank" class="instagram"><i id="conbar3" class="fa fa-instagram"></i></a>
+</div>
+<DIV ID = "toTop" > ⬆ </DIV>
+<script src="contacts.js" ></script>
+</body>
+</html>
